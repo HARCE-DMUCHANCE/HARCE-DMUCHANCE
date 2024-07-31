@@ -8,6 +8,143 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #ffeb3b;
+            color: #333;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff5722;
+        }
+
+        .hero-text {
+            text-align: center;
+            margin-top: 80px; /* Space for fixed header */
+        }
+
+        .hero-text h1 {
+            font-family: 'Baloo 2', cursive;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ff5722;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+        }
+
+        .quick-contact {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .quick-contact a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        .quick-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .kite img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-family: 'Baloo 2', cursive;
+            margin-bottom: 20px;
+            color: #ff5722;
+            font-size: 2rem;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .offer-item {
+            margin: 20px 0;
+        }
+
+        .offer-title {
+            font-size: 1.5rem;
+            color: #ff5722;
+        }
+
+        .offer-details, .offer-pricing {
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -80,15 +217,4 @@
             <p><strong>Horyzont Jarosław Wołek</strong></p>
             <p>WĘDROWNA 12/6, 20-819 LUBLIN</p>
             <p><strong>NIP:</strong> 7123080075</p>
-            <p><strong>REGON:</strong> 061477594</p>
-            <p><strong>Telefon:</strong> +48 730-002-532, +48 720-835-638</p>
-            <p>Jesteśmy dla Ciebie dostępni 7 dni w tygodniu. Doradzimy, skonsultujemy ofertę, przedstawimy najlepsze rozwiązania. Skorzystaj ze szczytu sezonu 2024. Zadzwoń lub zostaw do siebie dane. Oddzwonimy.</p>
-            <p><strong>Email:</strong> <a href="mailto:dmuchancehoryzont@gmail.com">dmuchancehoryzont@gmail.com</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 HARCE DMUCHANCE. Wszystkie prawa zastrzeżone.</p>
-    </footer>
-</body>
-</html>
+            <p><strong>REGON:</strong> 061

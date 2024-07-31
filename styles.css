@@ -1,31 +1,35 @@
-/* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #e0f7fa; /* pastelowy błękit */
-    color: #333;
+/* Resetowanie domyślnych stylów */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    position: relative;
+    box-sizing: border-box;
+}
+
+/* Globalne ustawienia */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e3f2fd; /* Błękitne tło */
+    color: #00796b; /* Głęboka zieleń tekstu */
     overflow-x: hidden;
+    position: relative;
 }
 
 header {
-    background-color: #b2dfdb; /* pastelowa zieleń */
-    padding: 10px;
+    background-color: #b2dfdb; /* Delikatna zieleń */
+    padding: 20px;
     text-align: center;
     position: relative;
+    z-index: 2;
 }
 
 header .logo img {
-    width: 200px; /* Rozmiar logo, dostosuj według potrzeb */
-    display: block;
-    margin: 0 auto;
+    width: 200px; /* Duże logo */
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0;
 }
 
 nav ul li {
@@ -35,158 +39,45 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #00796b; /* Głęboka zieleń */
     font-weight: bold;
-    font-family: 'Baloo 2', cursive;
 }
 
-section {
-    padding: 40px 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2, h3 {
-    font-family: 'Baloo 2', cursive;
-    color: #00796b; /* głęboka zieleń */
-}
-
-p {
-    line-height: 1.6;
-}
-
-.offer-item {
-    margin-bottom: 20px;
-    border: 2px solid #80cbc4; /* jasna zieleń */
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #e0f2f1; /* pastelowy zielony */
-}
-
-.offer-title {
-    font-size: 24px;
-    color: #004d40; /* głęboka zieleń */
-}
-
-.offer-details, .offer-pricing {
-    font-size: 18px;
-}
-
-.offer-notes {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-}
-
-.contact-info {
-    font-size: 16px;
-}
-
-.contact-info h3 {
-    font-family: 'Baloo 2', cursive;
-    font-size: 28px;
-    color: #00796b;
-}
-
-.contact-info a {
-    color: #004d40;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-footer {
+.hero-text {
     text-align: center;
-    padding: 15px;
-    background-color: #00796b; /* głęboka zieleń */
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Animacje chmurek */
-.clouds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.cloud {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    width: 200px;
-    height: 120px;
-    opacity: 0.8;
-    animation: drift 60s linear infinite;
-}
-
-.cloud:nth-child(1) {
-    top: 10%;
-    left: -10%;
-    width: 300px;
-    height: 180px;
-    animation-duration: 80s;
-}
-
-.cloud:nth-child(2) {
-    top: 20%;
-    left: 50%;
-    width: 250px;
-    height: 150px;
-    animation-duration: 70s;
-}
-
-.cloud:nth-child(3) {
-    top: 40%;
-    left: 80%;
-    width: 200px;
-    height: 120px;
-    animation-duration: 90s;
-}
-
-@keyframes drift {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-/* Tęcza */
-.rainbow {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(90deg, #f44336, #e91e63, #9c27b0, #673ab7, #3f51b5, #03a9f4, #00bcd4, #009688, #4caf50, #8bc34a, #cddc39, #ffeb3b);
-    background-size: 400% 100%;
-    animation: rainbow 15s ease infinite;
-    opacity: 0.5;
+    padding: 50px 20px;
     z-index: 1;
 }
 
-@keyframes rainbow {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+.hero-text h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
-/* Latawiec */
+.hero-text p {
+    font-size: 1.5em;
+}
+
+.quick-contact {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.quick-contact p {
+    font-size: 1.2em;
+}
+
+.quick-contact a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.qr-code img {
+    width: 150px;
+    margin-top: 10px;
+}
+
 .kite {
     position: absolute;
     top: 20%;
@@ -208,7 +99,141 @@ footer {
     50% {
         transform: translateY(-30px) translateX(30px);
     }
-    100% {
-        transform: translateY(0) translateX(60px);
+     100% {
+        transform: translateY(0) translateX(0);
     }
+}
+
+.clouds {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 60px;
+    opacity: 0.8;
+    animation: float 10s ease-in-out infinite;
+}
+
+.cloud::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 80px;
+    height: 60px;
+    top: -20px;
+    left: 20px;
+}
+
+.cloud:nth-child(1) {
+    top: 20px;
+    left: -100px;
+    width: 120px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.cloud:nth-child(2) {
+    top: 100px;
+    left: 100px;
+    width: 150px;
+    height: 100px;
+    animation-delay: 2s;
+}
+
+.cloud:nth-child(3) {
+    top: 60px;
+    left: 300px;
+    width: 100px;
+    height: 70px;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.rainbow {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
+    background-size: 800% 100%;
+    animation: rainbow 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.offer-item {
+    background-color: #ffffff;
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+}
+
+.offer-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.8em;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.offer-pricing {
+    font-size: 1.2em;
+    color: #00796b;
+}
+
+.offer-notes {
+    font-size: 1em;
+    color: #004d40;
+}
+
+.contact-info {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #b2dfdb; /* Delikatna zieleń */
+    padding: 10px;
+    text-align: center;
+    color: #00796b;
 }

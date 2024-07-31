@@ -27,8 +27,8 @@ header {
 }
 
 header .logo {
-    width: 600px; /* Szerokość kontenera logo */
-    height: 150px; /* Wysokość kontenera logo */
+    width: 500px; /* Szerokość kontenera logo */
+    height: 100px; /* Wysokość kontenera logo */
     background-image: url('Colorful Kids Playground Logo.png');
     background-repeat: no-repeat;
     background-size: contain; /* Dopasowuje rozmiar obrazu do kontenera */
@@ -89,10 +89,10 @@ nav ul li a {
 
 .kite {
     position: absolute;
-    top: 20%;
-    right: 10%;
-    width: 200px; /* Zwiększa szerokość latawca */
-    height: 200px; /* Zwiększa wysokość latawca */
+    top: 10%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
     animation: fly 10s linear infinite;
     z-index: 1;
 }
@@ -193,4 +193,14 @@ footer {
     text-align: center;
     font-size: 0.8em;
     color: #004d40; /* Ciemna zieleń */
+}
+
+.playground-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.playground-image img {
+    width: 100%;
+    max-width: 600px;
 }

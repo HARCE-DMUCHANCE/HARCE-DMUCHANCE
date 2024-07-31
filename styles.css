@@ -1,77 +1,63 @@
-/* styles.css */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    background-color: #e0f7fa; /* Tło w odcieniach nieba */
+    color: #004d40; /* Tekst w ciemnej zieleni */
+    overflow-x: hidden;
 }
 
 header {
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #b2dfdb; /* Delikatna zieleń */
     padding: 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header .logo-container {
+    margin: 20px 0;
 }
 
 header .logo {
-    float: left;
-    width: 120px;
-    height: 60px;
-    background: url('logo.png') no-repeat center center;
-    background-size: contain;
+    width: 500px; /* Duże logo */
+    height: auto;
 }
 
-header nav {
-    float: right;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
+nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
-header nav ul li a {
-    color: #fff;
+nav ul li a {
     text-decoration: none;
+    color: #00796b; /* Kolor tekstu */
     font-weight: bold;
+    font-size: 1.2em;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 80px 20px 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+nav ul li a:hover {
+    color: #004d40; /* Kolor tekstu po najechaniu */
 }
 
 .hero-text {
     text-align: center;
-    margin-bottom: 40px;
+    padding: 50px 20px;
 }
 
 .hero-text h1 {
-    font-size: 2.5em;
+    font-family: 'Baloo 2', cursive;
+    font-size: 3em;
     margin: 0;
 }
 
 .hero-text p {
-    font-size: 1.2em;
-    color: #555;
+    font-size: 1.5em;
 }
 
 .quick-contact {
@@ -80,79 +66,161 @@ section {
 }
 
 .quick-contact p {
-    margin: 10px 0;
-}
-
-.quick-contact a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.quick-contact a:hover {
-    text-decoration: underline;
-}
-
-.playground-image img, .kite img {
-    max-width: 100%;
-    height: auto;
-}
-
-.offer-item {
-    background-color: #e9ecef;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.offer-item h3 {
-    margin-top: 0;
-    font-size: 1.5em;
-}
-
-.offer-item p {
+    font-size: 1.2em;
     margin: 5px 0;
 }
 
+.qr-code {
+    margin: 20px auto;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+}
+
+.kite img {
+    width: 150px;
+    height: auto;
+    animation: fly 10s linear infinite;
+}
+
+@keyframes fly {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.offer-item {
+    background-color: #ffffff;
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+}
+
+.offer-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.8em;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.offer-pricing {
+    font-size: 1.2em;
+    color: #00796b;
+}
+
 .offer-notes {
-    font-style: italic;
-    color: #666;
+    font-size: 1em;
+    color: #004d40;
 }
 
 .contact-info {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 footer {
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #b2dfdb; /* Delikatna zieleń */
+    padding: 10px;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+    color: #00796b;
 }
 
-@media (max-width: 768px) {
-    header nav ul {
-        text-align: center;
-        float: none;
-    }
+.clouds {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
 
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+.cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 60px;
+    opacity: 0.8;
+    animation: float 10s ease-in-out infinite;
+}
 
-    .hero-text h1 {
-        font-size: 2em;
-    }
+.cloud::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 80px;
+    height: 60px;
+    top: -20px;
+    left: 20px;
+}
 
-    .hero-text p {
-        font-size: 1em;
+.cloud:nth-child(1) {
+    top: 20px;
+    left: -100px;
+    width: 120px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.cloud:nth-child(2) {
+    top: 100px;
+    left: 100px;
+    width: 150px;
+    height: 100px;
+    animation-delay: 2s;
+}
+
+.cloud:nth-child(3) {
+    top: 60px;
+    left: 300px;
+    width: 100px;
+    height: 70px;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.rainbow {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
+    background-size: 800% 100%;
+    animation: rainbow 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
     }
 }

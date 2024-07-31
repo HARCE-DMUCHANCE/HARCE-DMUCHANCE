@@ -10,18 +10,18 @@ header {
     background-color: #ffebcd; /* pastelowy beż */
     padding: 10px;
     text-align: center;
+    position: relative;
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Pacifico', cursive;
-    color: #ff6347; /* pastelowy pomarańcz */
+header .logo img {
+    width: 150px; /* Rozmiar logo, dostosuj według potrzeb */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    background-color: #ffebcd;
 }
 
 nav ul li {
@@ -32,12 +32,15 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
+    font-weight: bold;
 }
 
 section {
     padding: 20px;
     margin: 10px;
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .offer-item {
@@ -88,27 +91,6 @@ footer {
     background-color: #ffebcd;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label, form input, form textarea {
-    margin-bottom: 10px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #ffb6c1; /* pastelowy róż */
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #ff69b4; /* intensywniejszy róż */
-}
-
 /* Animacje */
 .fade-in {
     opacity: 0;
@@ -129,5 +111,39 @@ form button:hover {
 @keyframes slideIn {
     to {
         transform: translateX(0);
+    }
+}
+
+/* Animacja dmuchańca */
+.animation-wrapper {
+    position: relative;
+    height: 300px; /* Wysokość sekcji z animacją */
+    overflow: hidden;
+}
+
+.animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    animation: bounce 4s infinite;
+}
+
+.animation img {
+    width: 100%;
+    height: auto;
+}
+
+/* Animacja skakania dmuchańca */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
     }
 }

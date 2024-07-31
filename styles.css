@@ -115,125 +115,73 @@ nav ul li a {
     background: #fff;
     border-radius: 50%;
     width: 100px;
-    height: 60px;
-    opacity: 0.8;
-    animation: float 10s ease-in-out infinite;
-}
-
-.cloud::before {
-    content: "";
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    width: 80px;
-    height: 60px;
-    top: -20px;
-    left: 20px;
-}
-
-.cloud:nth-child(1) {
-    top: 20px;
-    left: -100px;
-    width: 120px;
-    height: 80px;
-    animation-delay: 0s;
+    height: 100px;
+    box-shadow: 200px 80px 0 -50px #fff, 270px 80px 0 -50px #fff, 170px 100px 0 -50px #fff;
+    animation: moveClouds 60s linear infinite;
 }
 
 .cloud:nth-child(2) {
-    top: 100px;
-    left: 100px;
-    width: 150px;
-    height: 100px;
-    animation-delay: 2s;
+    width: 120px;
+    height: 120px;
+    top: 80px;
+    left: 50%;
+    animation-duration: 80s;
 }
 
 .cloud:nth-child(3) {
-    top: 60px;
-    left: 300px;
-    width: 100px;
-    height: 70px;
-    animation-delay: 4s;
+    width: 150px;
+    height: 150px;
+    top: 50px;
+    left: 80%;
+    animation-duration: 100s;
 }
 
-@keyframes float {
+@keyframes moveClouds {
     0% {
-        transform: translateX(0);
+        transform: translateX(-100%);
     }
     100% {
-        transform: translateX(100vw);
+        transform: translateX(100%);
     }
 }
 
 .rainbow {
     position: absolute;
-    top: 100px;
-    left: 0;
-    width: 200%;
-    height: 100px;
-    background: linear-gradient(to right, #f44336, #ff9800, #ffeb3b, #4caf50, #2196f3, #9c27b0);
-    background-size: 800% 100%;
-    animation: rainbow 15s linear infinite;
+    bottom: 0;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    border-radius: 50%;
     z-index: 0;
 }
 
-@keyframes rainbow {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
-section h2 {
-    font-family: 'Baloo 2', cursive;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
 .offer-item {
-    background-color: #ffffff;
-    border: 1px solid #00796b;
-    border-radius: 10px;
+    margin: 20px 0;
+    background-color: #ffffff; /* Białe tło */
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    text-align: left;
-    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .offer-title {
-    font-family: 'Baloo 2', cursive;
-    font-size: 1.8em;
-    color: #00796b;
-    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #00796b; /* Głęboka zieleń */
 }
 
-.offer-pricing {
-    font-size: 1.2em;
-    color: #00796b;
-}
-
-.offer-notes {
-    font-size: 1em;
-    color: #004d40;
-}
-
-.contact-info {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
+.offer-details, .offer-pricing, .offer-notes {
+    margin-top: 10px;
 }
 
 footer {
     background-color: #b2dfdb; /* Delikatna zieleń */
     padding: 10px;
     text-align: center;
-    color: #00796b;
+    font-size: 0.8em;
+    color: #004d40; /* Ciemna zieleń */
 }

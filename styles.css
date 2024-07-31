@@ -15,6 +15,8 @@ header {
 header .logo {
     font-size: 24px;
     font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    color: #ff6347; /* pastelowy pomarańcz */
 }
 
 nav ul {
@@ -61,6 +63,25 @@ section {
     color: #666;
 }
 
+.contact-info {
+    font-size: 16px;
+}
+
+.contact-info h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #ff6347; /* pastelowy pomarańcz */
+}
+
+.contact-info a {
+    color: #ff69b4; /* pastelowy róż */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
     padding: 10px;
@@ -86,4 +107,27 @@ form button {
 
 form button:hover {
     background-color: #ff69b4; /* intensywniejszy róż */
+}
+
+/* Animacje */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
 }

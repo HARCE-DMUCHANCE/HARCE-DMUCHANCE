@@ -1,105 +1,89 @@
-/* styles.css */
-
-/* Reset podstawowych stylów przeglądarki */
-* {
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff; /* pastelowy błękit */
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Style dla całej strony */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding-top: 70px; /* Dodajemy miejsce na nagłówek */
-}
-
-/* Style dla nagłówka */
 header {
-    background: #333;
-    color: #fff;
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #ffebcd; /* pastelowy beż */
+    padding: 10px;
+    text-align: center;
 }
 
-header #logo {
-    height: 60px;
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0;
+    display: inline;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-nav ul li a:hover {
-    background: #555;
-    border-radius: 5px;
-}
-
-/* Style dla sekcji głównej */
-main {
-    padding: 20px;
+    color: #333;
 }
 
 section {
-    margin-bottom: 30px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
 }
 
-h1, h2 {
-    color: #333;
-    margin-bottom: 15px;
+.offer-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.screenshot {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto;
+.offer-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color: #ff6347; /* pastelowy pomarańcz */
 }
 
-/* Style dla sekcji kontaktowej */
-ul {
-    list-style: none;
+.offer-details, .offer-pricing {
+    font-size: 16px;
 }
 
-ul li {
+.offer-notes {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffebcd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea {
     margin-bottom: 10px;
 }
 
-/* Style dla stopki */
-footer {
-    background: #333;
+form button {
+    padding: 10px;
+    background-color: #ffb6c1; /* pastelowy róż */
+    border: none;
     color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    cursor: pointer;
 }
 
-footer p {
-    margin: 0;
+form button:hover {
+    background-color: #ff69b4; /* intensywniejszy róż */
 }

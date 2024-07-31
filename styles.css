@@ -5,6 +5,8 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow-x: hidden;
 }
 
 header {
@@ -93,7 +95,7 @@ p {
     text-decoration: none;
 }
 
-contact-info a:hover {
+.contact-info a:hover {
     text-decoration: underline;
 }
 
@@ -105,78 +107,82 @@ footer {
 
 #home {
     background: linear-gradient(120deg, #e0f7fa 0%, #b2dfdb 100%);
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
     position: relative;
-    z-index: 1;
+    padding-top: 100px; /* Ensure text is below the header */
 }
 
-#home .hero-text h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
+.hero-text h1 {
+    font-size: 36px;
+    margin: 0;
 }
 
-#home .hero-text p {
+.hero-text p {
     font-size: 24px;
 }
 
-#home .quick-contact {
-    margin-top: 30px;
+.quick-contact {
+    text-align: center;
+    margin-top: 20px;
 }
 
-#home .quick-contact p {
-    font-size: 20px;
+.qr-code {
+    margin-top: 20px;
 }
 
 .qr-code img {
     width: 150px;
-    margin-top: 10px;
 }
 
-/* Animacje chmur */
-@keyframes slideIn {
+/* Animacje chmurek */
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 200px;
+    height: 120px;
+    opacity: 0.8;
+    animation: drift 60s linear infinite;
+}
+
+.cloud:nth-child(1) {
+    top: 10%;
+    left: -10%;
+    width: 300px;
+    height: 180px;
+    animation-duration: 80s;
+}
+
+.cloud:nth-child(2) {
+    top: 20%;
+    left: 50%;
+    width: 250px;
+    height: 150px;
+    animation-duration: 70s;
+}
+
+.cloud:nth-child(3) {
+    top: 40%;
+    left: 80%;
+    width: 200px;
+    height: 120px;
+    animation-duration: 90s;
+}
+
+@keyframes drift {
     0% {
         transform: translateX(-100%);
     }
     100% {
         transform: translateX(100%);
     }
-}
-
-.clouds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.cloud {
-    width: 200px;
-    height: 100px;
-    background: #ffffff;
-    border-radius: 50%;
-    position: absolute;
-    animation: slideIn 60s linear infinite;
-}
-
-.cloud:nth-child(1) {
-    top: 20px;
-    left: -200px;
-    animation-duration: 50s;
-}
-
-.cloud:nth-child(2) {
-    top: 50px;
-    left: -250px;
-    animation-duration: 70s;
-}
-
-.cloud:nth-child(3) {
-    top: 30px;
-    left: -300px;
-    animation-duration: 60s;
 }

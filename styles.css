@@ -1,5 +1,6 @@
+/* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f0f8ff; /* pastelowy błękit */
     color: #333;
     margin: 0;
@@ -7,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #ffebcd; /* pastelowy beż */
+    background-color: #ffd1dc; /* pastelowy róż */
     padding: 10px;
     text-align: center;
     position: relative;
@@ -21,7 +22,6 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: #ffebcd;
 }
 
 nav ul li {
@@ -36,28 +36,37 @@ nav ul li a {
 }
 
 section {
-    padding: 20px;
-    margin: 10px;
+    padding: 40px 20px;
+    margin: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+h1, h2, h3 {
+    font-family: 'Baloo 2', cursive;
+    color: #ff6f61; /* pastelowy pomarańcz */
+}
+
+p {
+    line-height: 1.6;
+}
+
 .offer-item {
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
+    border: 2px solid #ffcbcb;
+    padding: 15px;
     border-radius: 5px;
+    background-color: #fff0f5;
 }
 
 .offer-title {
-    font-family: 'Pacifico', cursive;
-    font-size: 20px;
-    color: #ff6347; /* pastelowy pomarańcz */
+    font-size: 24px;
+    color: #ff6f61;
 }
 
 .offer-details, .offer-pricing {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .offer-notes {
@@ -71,9 +80,9 @@ section {
 }
 
 .contact-info h3 {
-    font-family: 'Pacifico', cursive;
-    font-size: 24px;
-    color: #ff6347; /* pastelowy pomarańcz */
+    font-family: 'Baloo 2', cursive;
+    font-size: 28px;
+    color: #ff6f61;
 }
 
 .contact-info a {
@@ -87,8 +96,27 @@ section {
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #ffebcd;
+    padding: 15px;
+    background-color: #ffd1dc;
+}
+
+/* Hero Section */
+#home {
+    background: linear-gradient(120deg, #ffcbcb 0%, #ffd1dc 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#home .hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#home .hero-text p {
+    font-size: 24px;
 }
 
 /* Animacje */

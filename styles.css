@@ -12,18 +12,34 @@ body {
     color: #00796b; /* Głęboka zieleń tekstu */
     overflow-x: hidden;
     position: relative;
+    line-height: 1.6;
 }
 
+/* Stylizacja nagłówka */
 header {
     background-color: #b2dfdb; /* Delikatna zieleń */
     padding: 20px;
     text-align: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #a5d6a7; /* Delikatniejsza zieleń przy najechaniu */
 }
 
 header .logo img {
     width: 200px; /* Duże logo */
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1); /* Powiększenie logo przy najechaniu */
 }
 
 nav ul {
@@ -41,11 +57,18 @@ nav ul li a {
     text-decoration: none;
     color: #00796b; /* Głęboka zieleń */
     font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #004d40; /* Ciemniejsza zieleń */
+    transform: scale(1.1); /* Powiększenie linku przy najechaniu */
+}
+
+/* Stylizacja sekcji hero */
 .hero-text {
     text-align: center;
-    padding: 50px 20px;
+    padding: 100px 20px 50px; /* Więcej miejsca na górze, aby dostosować do nagłówka */
     z-index: 1;
 }
 
@@ -53,12 +76,17 @@ nav ul li a {
     font-family: 'Baloo 2', cursive;
     font-size: 3em;
     margin-bottom: 10px;
+    color: #004d40; /* Ciemniejsza zieleń */
+    animation: fadeIn 2s ease-out;
 }
 
 .hero-text p {
     font-size: 1.5em;
+    color: #00796b; /* Głęboka zieleń */
+    animation: fadeIn 2s ease-out 0.5s;
 }
 
+/* Stylizacja kontaktu */
 .quick-contact {
     text-align: center;
     margin: 20px 0;
@@ -71,6 +99,13 @@ nav ul li a {
 .quick-contact a {
     color: #00796b;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.quick-contact a:hover {
+    color: #004d40;
+    text-decoration: underline;
 }
 
 .qr-code img {
@@ -92,6 +127,7 @@ nav ul li a {
     width: 100%;
 }
 
+/* Animacje */
 @keyframes fly {
     0% {
         transform: translateY(0) translateX(0);
@@ -99,9 +135,14 @@ nav ul li a {
     50% {
         transform: translateY(-30px) translateX(30px);
     }
-     100% {
+    100% {
         transform: translateY(0) translateX(0);
     }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .clouds {
@@ -154,30 +195,55 @@ nav ul li a {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     border-radius: 50%;
     z-index: 0;
+    opacity: 0.5;
+    animation: rainbowAnimation 10s linear infinite;
+}
+
+@keyframes rainbowAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
 }
 
 section {
     padding: 50px 20px;
     text-align: center;
+    position: relative;
 }
 
+/* Stylizacja oferty */
 .offer-item {
-    margin: 20px 0;
+    margin: 20px auto;
     background-color: #ffffff; /* Białe tło */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
 .offer-title {
     font-size: 1.5em;
     color: #00796b; /* Głęboka zieleń */
+    margin-bottom: 10px;
 }
 
 .offer-details, .offer-pricing, .offer-notes {
     margin-top: 10px;
 }
 
+/* Stylizacja stopki */
 footer {
     background-color: #b2dfdb; /* Delikatna zieleń */
     padding: 10px;

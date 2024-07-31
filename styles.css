@@ -20,15 +20,11 @@ header {
     text-align: center;
     position: relative;
     z-index: 2;
-    height: 200px; /* Ustaw wysokość nagłówka */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header .logo {
-    width: 500px; /* Szerokość kontenera logo */
-    height: 100px; /* Wysokość kontenera logo */
+    width: 500px; /* Szerokość logo */
+    height: 100px; /* Wysokość logo */
     background-image: url('Colorful Kids Playground Logo.png');
     background-repeat: no-repeat;
     background-size: contain; /* Dopasowuje rozmiar obrazu do kontenera */
@@ -87,12 +83,24 @@ nav ul li a {
     margin-top: 10px;
 }
 
+.playground-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.playground-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 .kite {
     position: absolute;
-    top: 10%;
-    right: 5%;
-    width: 200px;
-    height: 200px;
+    top: 20%;
+    right: -15%;
+    width: 150px;
+    height: 150px;
     animation: fly 10s linear infinite;
     z-index: 1;
 }
@@ -193,14 +201,4 @@ footer {
     text-align: center;
     font-size: 0.8em;
     color: #004d40; /* Ciemna zieleń */
-}
-
-.playground-image {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.playground-image img {
-    width: 100%;
-    max-width: 600px;
 }

@@ -1,21 +1,23 @@
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f8ff; /* pastelowy błękit */
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0f7fa; /* pastelowy błękit */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #ffd1dc; /* pastelowy róż */
+    background-color: #b2dfdb; /* pastelowa zieleń */
     padding: 10px;
     text-align: center;
     position: relative;
 }
 
 header .logo img {
-    width: 150px; /* Rozmiar logo, dostosuj według potrzeb */
+    width: 200px; /* Rozmiar logo, dostosuj według potrzeb */
+    display: block;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -26,13 +28,14 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-family: 'Baloo 2', cursive;
 }
 
 section {
@@ -45,7 +48,7 @@ section {
 
 h1, h2, h3 {
     font-family: 'Baloo 2', cursive;
-    color: #ff6f61; /* pastelowy pomarańcz */
+    color: #00796b; /* głęboka zieleń */
 }
 
 p {
@@ -54,15 +57,15 @@ p {
 
 .offer-item {
     margin-bottom: 20px;
-    border: 2px solid #ffcbcb;
+    border: 2px solid #80cbc4; /* jasna zieleń */
     padding: 15px;
     border-radius: 5px;
-    background-color: #fff0f5;
+    background-color: #e0f2f1; /* pastelowy zielony */
 }
 
 .offer-title {
     font-size: 24px;
-    color: #ff6f61;
+    color: #004d40; /* głęboka zieleń */
 }
 
 .offer-details, .offer-pricing {
@@ -82,11 +85,11 @@ p {
 .contact-info h3 {
     font-family: 'Baloo 2', cursive;
     font-size: 28px;
-    color: #ff6f61;
+    color: #00796b;
 }
 
 .contact-info a {
-    color: #ff69b4; /* pastelowy róż */
+    color: #004d40;
     text-decoration: none;
 }
 
@@ -97,12 +100,11 @@ p {
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #ffd1dc;
+    background-color: #b2dfdb;
 }
 
-/* Hero Section */
 #home {
-    background: linear-gradient(120deg, #ffcbcb 0%, #ffd1dc 100%);
+    background: linear-gradient(120deg, #e0f7fa 0%, #b2dfdb 100%);
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -119,25 +121,62 @@ footer {
     font-size: 24px;
 }
 
-/* Animacje */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+#home .quick-contact {
+    margin-top: 30px;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+#home .quick-contact p {
+    font-size: 20px;
 }
 
-.slide-in {
-    transform: translateX(-100%);
-    animation: slideIn 1s forwards;
+.qr-code img {
+    width: 150px;
+    margin-top: 10px;
 }
 
+/* Animacje chmur */
 @keyframes slideIn {
-    to {
-        transform: translateX(0);
+    0% {
+        transform: translateX(-100%);
     }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.cloud {
+    width: 200px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    animation: slideIn 60s linear infinite;
+}
+
+.cloud:nth-child(1) {
+    top: 20px;
+    left: -200px;
+    animation-duration: 50s;
+}
+
+.cloud:nth-child(2) {
+    top: 50px;
+    left: -250px;
+    animation-duration: 70s;
+}
+
+.cloud:nth-child(3) {
+    top: 30px;
+    left: -300px;
+    animation-duration: 60s;
 }

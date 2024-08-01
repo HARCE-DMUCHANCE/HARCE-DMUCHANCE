@@ -154,6 +154,11 @@ section h2 {
     font-size: 1em;
 }
 
+.contact-info textarea {
+    resize: vertical;
+    height: 150px; /* Powiększone pole tekstowe */
+}
+
 .contact-info button {
     background-color: #00796b;
     color: #ffffff;

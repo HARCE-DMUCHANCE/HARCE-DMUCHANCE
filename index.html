@@ -78,9 +78,12 @@
     <section id="contact">
         <h2>Kontakt</h2>
         <div class="contact-info">
+            <p><strong>Dane Firmy:</strong></p>
+            <p><strong>Nazwa:</strong> Horyzont Jarosław Wołek</p>
+            <p><strong>Adres:</strong> ul. Kwiatowa 15, 00-000 Warszawa</p>
             <p><strong>Telefon:</strong> +48 730-002-532</p>
             <p><strong>Email:</strong> <a href="mailto:dmuchancehoryzont@gmail.com">dmuchancehoryzont@gmail.com</a></p>
-            <form action="mailto:dmuchancehoryzont@gmail.com" method="post" enctype="text/plain">
+            <form id="contact-form">
                 <label for="name">Imię:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="phone">Numer telefonu:</label>
@@ -89,11 +92,30 @@
                 <textarea id="message" name="message" rows="8" required></textarea>
                 <button type="submit">Wyślij</button>
             </form>
+            <div id="thank-you-message" class="hidden">
+                <p>Dziękujemy za zainteresowanie naszą ofertą. Postaramy się skontaktować z Tobą jak najszybciej. Zachęcamy również do kontaktu telefonicznego.</p>
+            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 HARCE DMUCHANCE</p>
     </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Zatrzymuje domyślne działanie formularza
+
+            // Wyświetla komunikat z podziękowaniem
+            document.getElementById('thank-you-message').classList.remove('hidden');
+
+            // Wysyła formularz na email (działa tylko w przypadku prawidłowej konfiguracji serwera email)
+            const form = event.target;
+            const formData = new FormData(form);
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://formspree.io/f/YOUR_FORM_ID', true); // Zastąp YOUR_FORM_ID prawidłowym ID formularza Formspree
+            xhr.send(formData);
+        });
+    </script>
 </body>
 </html>

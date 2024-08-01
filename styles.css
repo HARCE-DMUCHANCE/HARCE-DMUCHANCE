@@ -196,22 +196,3 @@ footer {
     0% { background-position: 0% 0%; }
     100% { background-position: 100% 0%; }
 }
-
-/* Dostosowania do różnych ekranów */
-@media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 2em;
-    }
-
-    .hero-text p {
-        font-size: 1.2em;
-    }
-
-    .logo {
-        width: 200px; /* Mniejsze logo na mniejszych ekranach */
-    }
-
-    .offer-item {
-        width: 90%;
-    }
-}

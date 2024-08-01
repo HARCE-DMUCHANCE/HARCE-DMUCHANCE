@@ -173,6 +173,18 @@ section h2 {
     background-color: #004d40;
 }
 
+#thank-you-message {
+    display: none;
+    text-align: center;
+    font-size: 1.2em;
+    color: #004d40;
+    margin-top: 20px;
+}
+
+#thank-you-message.hidden {
+    display: none;
+}
+
 footer {
     background: #00796b;
     color: white;

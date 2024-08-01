@@ -137,6 +137,37 @@ section h2 {
     text-align: left;
 }
 
+.contact-info form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info label {
+    margin: 10px 0 5px;
+}
+
+.contact-info input, .contact-info textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-info button {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.contact-info button:hover {
+    background-color: #004d40;
+}
+
 footer {
     background: #00796b;
     color: white;

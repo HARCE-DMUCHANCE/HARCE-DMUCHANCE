@@ -80,10 +80,12 @@
         <div class="contact-info">
             <p><strong>Dane Firmy:</strong></p>
             <p><strong>Nazwa:</strong> Horyzont Jarosław Wołek</p>
-            <p><strong>Adres:</strong> ul. Kwiatowa 15, 00-000 Warszawa</p>
+            <p><strong>Adres:</strong> WĘDROWNA 12/6, 20-819 LUBLIN</p>
+            <p><strong>NIP:</strong> 7123080075</p>
+            <p><strong>REGON:</strong> 061477594</p>
             <p><strong>Telefon:</strong> +48 730-002-532</p>
             <p><strong>Email:</strong> <a href="mailto:dmuchancehoryzont@gmail.com">dmuchancehoryzont@gmail.com</a></p>
-            <form id="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <label for="name">Imię:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="phone">Numer telefonu:</label>
@@ -109,12 +111,8 @@
             // Wyświetla komunikat z podziękowaniem
             document.getElementById('thank-you-message').classList.remove('hidden');
 
-            // Wysyła formularz na email (działa tylko w przypadku prawidłowej konfiguracji serwera email)
-            const form = event.target;
-            const formData = new FormData(form);
-            const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://formspree.io/f/YOUR_FORM_ID', true); // Zastąp YOUR_FORM_ID prawidłowym ID formularza Formspree
-            xhr.send(formData);
+            // Zresetowanie formularza po wysłaniu
+            event.target.reset();
         });
     </script>
 </body>

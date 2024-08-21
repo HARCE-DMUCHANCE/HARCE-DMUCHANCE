@@ -54,19 +54,30 @@
 
     <section id="about">
         <h2>Nasza Misja</h2>
-        <p>W HARCE DMUCHANCE wierzymy, że każdy uśmiech ma swoją moc...</p>
+        <p>W HARCE DMUCHANCE wierzymy, że każdy uśmiech ma swoją moc. Naszą misją jest przekształcanie zwykłych podwórek w niezwykłe place zabaw, które zapewniają radość i niezapomniane chwile dzieciom i ich rodzinom. Każde nasze dmuchane urządzenie jest stworzone z pasją i troską, aby każda impreza stała się wyjątkowym wydarzeniem. Działamy z sercem, aby każdy dzień był pełen śmiechu, a każda zabawa - bezpieczna i pełna przygód.</p>
     </section>
 
     <section id="offer">
         <h2>Oferta</h2>
-        <p>Oferujemy wynajem dmuchańców na imprezy zorganizowane i prywatne...</p>
+        <p>Oferujemy wynajem dmuchańców na imprezy zorganizowane i prywatne. W naszej ofercie znajdziecie nowe urządzenia polskiego producenta Amar Group, które posiadają potrzebne atesty i certyfikaty.</p>
         <div class="offer-item">
             <h3 class="offer-title">Plac zabaw SAFARI</h3>
             <p class="offer-details">Potrzebna powierzchnia: 5,5 x 5,5 x 3 m</p>
             <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
             <img src="Plac%20zabaw.png" alt="Plac zabaw SAFARI">
         </div>
-        <!-- Inne oferty... -->
+        <div class="offer-item">
+            <h3 class="offer-title">Zjeżdżalnia Jungle</h3>
+            <p class="offer-details">Potrzebna powierzchnia: 6 x 4,5 x 7,5 m</p>
+            <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
+            <img src="Jungle.png" alt="Zjeżdżalnia Jungle">
+        </div>
+        <div class="offer-item">
+            <h3 class="offer-title">Zjeżdżalnia Jungle MAX</h3>
+            <p class="offer-details">Potrzebna powierzchnia: 9 x 5,5 x 7 m</p>
+            <p class="offer-pricing">3h - 599 zł<br>5h - 649 zł<br>8h - 799 zł</p>
+            <img src="Jungle_MAX.png" alt="Zjeżdżalnia Jungle MAX">
+        </div>
     </section>
 
     <section id="gallery">
@@ -75,14 +86,13 @@
             <img src="realizacja1.jpeg" alt="Zdjęcie 1 z realizacji">
             <img src="realizacja2.jpeg" alt="Zdjęcie 2 z realizacji">
             <img src="realizacja3.jpeg" alt="Zdjęcie 3 z realizacji">
-            <!-- Dodaj więcej zdjęć według potrzeby -->
         </div>
     </section>
 
     <section id="downloads">
         <h2>Pliki do pobrania</h2>
         <div class="downloads-container">
-            <a href="Regulamin%20Korzystania%20z%20Dmuchańców.pdf" download>Regulamin Korzystania z Dmuchańców</a>
+            <a href="Regulamin_Korzystania_z_Dmuchańców.pdf" class="download-link" download>Regulamin Korzystania z Dmuchańców</a>
         </div>
     </section>
 
@@ -106,7 +116,7 @@
                 <button type="submit">Wyślij</button>
             </form>
             <div id="thank-you-message" class="hidden">
-                <p>Dziękujemy za zainteresowanie naszą ofertą...</p>
+                <p>Dziękujemy za zainteresowanie naszą ofertą. Postaramy się skontaktować z Tobą jak najszybciej. Zachęcamy również do kontaktu telefonicznego.</p>
             </div>
         </div>
     </section>
@@ -116,23 +126,29 @@
     </footer>
 
     <script>
-        // Wyświetlanie aktualnej daty i godziny
+        // Aktualizacja daty i godziny
         function updateDateTime() {
             const now = new Date();
-            const dateTimeString = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            const dateTimeString = now.toLocaleString();
             document.getElementById('dateTime').textContent = dateTimeString;
         }
         setInterval(updateDateTime, 1000);
 
-        // Animacja zakładek w nawigacji
-        document.querySelectorAll('nav ul li a').forEach(function(navLink) {
-            navLink.addEventListener('mouseenter', function() {
-                navLink.style.transform = 'scale(1.2)';
-                navLink.style.transition = 'transform 0.3s ease-in-out';
+        // Animacja powiększania zakładek
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.2)';
             });
-            navLink.addEventListener('mouseleave', function() {
-                navLink.style.transform = 'scale(1)';
+            link.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
             });
+        });
+
+        // Animacja formularza kontaktowego
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('contact-form').classList.add('hidden');
+            document.getElementById('thank-you-message').classList.remove('hidden');
         });
     </script>
 </body>

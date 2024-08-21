@@ -8,17 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script>
-        // Skrypt do wyświetlania aktualnej daty i godziny
-        function updateDateTime() {
-            const now = new Date();
-            const dateTimeStr = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
-            document.getElementById('current-date-time').textContent = dateTimeStr;
-        }
-        setInterval(updateDateTime, 1000); // Aktualizacja co 1 sekundę
-    </script>
 </head>
-<body onload="updateDateTime()">
+<body>
     <header>
         <div class="logo-container">
             <img src="LOGO.png" alt="HARCE DMUCHANCE Logo" class="logo">
@@ -28,14 +19,12 @@
                 <li><a href="#home">Strona Główna</a></li>
                 <li><a href="#about">Nasza Misja</a></li>
                 <li><a href="#offer">Oferta</a></li>
-                <li><a href="#downloads">Pliki do pobrania</a></li>
                 <li><a href="#gallery">Zdjęcia z realizacji</a></li>
+                <li><a href="#downloads">Pliki do pobrania</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
-        <div id="current-date-time" class="date-time">
-            <!-- Aktualna data i godzina będzie tutaj -->
-        </div>
+        <div class="date-time" id="dateTime"></div>
     </header>
 
     <section id="home">
@@ -77,38 +66,24 @@
             <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
             <img src="Plac%20zabaw.png" alt="Plac zabaw SAFARI">
         </div>
-        <div class="offer-item">
-            <h3 class="offer-title">Zjeżdżalnia Jungle</h3>
-            <p class="offer-details">Potrzebna powierzchnia: 6 x 4,5 x 7,5 m</p>
-            <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
-            <img src="Jungle.png" alt="Zjeżdżalnia Jungle">
-        </div>
-        <div class="offer-item">
-            <h3 class="offer-title">Zjeżdżalnia Jungle MAX</h3>
-            <p class="offer-details">Potrzebna powierzchnia: 9 x 5,5 x 7 m</p>
-            <p class="offer-pricing">3h - 599 zł<br>5h - 649 zł<br>8h - 799 zł</p>
-            <img src="Jungle_MAX.png" alt="Zjeżdżalnia Jungle MAX">
+        <!-- Inne oferty... -->
+    </section>
+
+    <section id="gallery">
+        <h2>Zdjęcia z realizacji</h2>
+        <div class="gallery-container">
+            <img src="realizacja1.jpeg" alt="Zdjęcie 1 z realizacji">
+            <img src="realizacja2.jpeg" alt="Zdjęcie 2 z realizacji">
+            <img src="realizacja3.jpeg" alt="Zdjęcie 3 z realizacji">
+            <!-- Dodaj więcej zdjęć według potrzeby -->
         </div>
     </section>
 
     <section id="downloads">
         <h2>Pliki do pobrania</h2>
-        <ul>
-            <li><a href="path/to/plik1.pdf" download>Plik 1 (PDF)</a></li>
-            <li><a href="path/to/plik2.docx" download>Plik 2 (DOCX)</a></li>
-            <li><a href="path/to/plik3.zip" download>Plik 3 (ZIP)</a></li>
-        </ul>
-    </section>
-
-    <section id="gallery">
-        <h2>Zdjęcia z realizacji</h2>
-<div class="gallery-container">
-    <img src="realizacja1.jpeg" alt="Zdjęcie 1 z realizacji">
-    <img src="realizacja2.jpeg" alt="Zdjęcie 2 z realizacji">
-    <img src="realizacja3.jpeg" alt="Zdjęcie 3 z realizacji">
-    <!-- Dodaj więcej zdjęć według potrzeby -->
-</div>
-        
+        <div class="downloads-container">
+            <a href="Regulamin%20Korzystania%20z%20Dmuchańców.pdf" download>Regulamin Korzystania z Dmuchańców</a>
+        </div>
     </section>
 
     <section id="contact">
@@ -141,14 +116,23 @@
     </footer>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Zatrzymuje domyślne działanie formularza
+        // Wyświetlanie aktualnej daty i godziny
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            document.getElementById('dateTime').textContent = dateTimeString;
+        }
+        setInterval(updateDateTime, 1000);
 
-            // Wyświetla komunikat z podziękowaniem
-            document.getElementById('thank-you-message').classList.remove('hidden');
-
-            // Zresetowanie formularza po wysłaniu
-            event.target.reset();
+        // Animacja zakładek w nawigacji
+        document.querySelectorAll('nav ul li a').forEach(function(navLink) {
+            navLink.addEventListener('mouseenter', function() {
+                navLink.style.transform = 'scale(1.2)';
+                navLink.style.transition = 'transform 0.3s ease-in-out';
+            });
+            navLink.addEventListener('mouseleave', function() {
+                navLink.style.transform = 'scale(1)';
+            });
         });
     </script>
 </body>

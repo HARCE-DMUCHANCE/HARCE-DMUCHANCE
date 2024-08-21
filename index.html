@@ -8,8 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        // Skrypt do wyświetlania aktualnej daty i godziny
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeStr = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            document.getElementById('current-date-time').textContent = dateTimeStr;
+        }
+        setInterval(updateDateTime, 1000); // Aktualizacja co 1 sekundę
+    </script>
 </head>
-<body>
+<body onload="updateDateTime()">
     <header>
         <div class="logo-container">
             <img src="LOGO.png" alt="HARCE DMUCHANCE Logo" class="logo">
@@ -19,9 +28,14 @@
                 <li><a href="#home">Strona Główna</a></li>
                 <li><a href="#about">Nasza Misja</a></li>
                 <li><a href="#offer">Oferta</a></li>
+                <li><a href="#downloads">Pliki do pobrania</a></li>
+                <li><a href="#gallery">Zdjęcia z realizacji</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
+        <div id="current-date-time" class="date-time">
+            <!-- Aktualna data i godzina będzie tutaj -->
+        </div>
     </header>
 
     <section id="home">
@@ -51,12 +65,12 @@
 
     <section id="about">
         <h2>Nasza Misja</h2>
-        <p>W HARCE DMUCHANCE wierzymy, że każdy uśmiech ma swoją moc. Naszą misją jest przekształcanie zwykłych podwórek w niezwykłe place zabaw, które zapewniają radość i niezapomniane chwile dzieciom i ich rodzinom. Każde nasze dmuchane urządzenie jest stworzone z pasją i troską, aby każda impreza stała się wyjątkowym wydarzeniem. Działamy z sercem, aby każdy dzień był pełen śmiechu, a każda zabawa - bezpieczna i pełna przygód.</p>
+        <p>W HARCE DMUCHANCE wierzymy, że każdy uśmiech ma swoją moc...</p>
     </section>
 
     <section id="offer">
         <h2>Oferta</h2>
-        <p>Oferujemy wynajem dmuchańców na imprezy zorganizowane i prywatne. W naszej ofercie znajdziecie nowe urządzenia polskiego producenta Amar Group, które posiadają potrzebne atesty i certyfikaty.</p>
+        <p>Oferujemy wynajem dmuchańców na imprezy zorganizowane i prywatne...</p>
         <div class="offer-item">
             <h3 class="offer-title">Plac zabaw SAFARI</h3>
             <p class="offer-details">Potrzebna powierzchnia: 5,5 x 5,5 x 3 m</p>
@@ -74,6 +88,25 @@
             <p class="offer-details">Potrzebna powierzchnia: 9 x 5,5 x 7 m</p>
             <p class="offer-pricing">3h - 599 zł<br>5h - 649 zł<br>8h - 799 zł</p>
             <img src="Jungle_MAX.png" alt="Zjeżdżalnia Jungle MAX">
+        </div>
+    </section>
+
+    <section id="downloads">
+        <h2>Pliki do pobrania</h2>
+        <ul>
+            <li><a href="path/to/plik1.pdf" download>Plik 1 (PDF)</a></li>
+            <li><a href="path/to/plik2.docx" download>Plik 2 (DOCX)</a></li>
+            <li><a href="path/to/plik3.zip" download>Plik 3 (ZIP)</a></li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Zdjęcia z realizacji</h2>
+        <div class="gallery-container">
+            <img src="realizacja1.jpg" alt="Zdjęcie 1 z realizacji">
+            <img src="realizacja2.jpg" alt="Zdjęcie 2 z realizacji">
+            <img src="realizacja3.jpg" alt="Zdjęcie 3 z realizacji">
+            <!-- Dodaj więcej zdjęć według potrzeby -->
         </div>
     </section>
 
@@ -97,7 +130,7 @@
                 <button type="submit">Wyślij</button>
             </form>
             <div id="thank-you-message" class="hidden">
-                <p>Dziękujemy za zainteresowanie naszą ofertą. Postaramy się skontaktować z Tobą jak najszybciej. Zachęcamy również do kontaktu telefonicznego.</p>
+                <p>Dziękujemy za zainteresowanie naszą ofertą...</p>
             </div>
         </div>
     </section>

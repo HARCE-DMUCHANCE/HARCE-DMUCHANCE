@@ -100,7 +100,9 @@ section#home {
 }
 
 .qr-code-img {
-    width: 100px; /* Zmniejszenie rozmiaru QR Code */
+    width: 30%; /* Zmniejszenie QR Code o 70% */
+    max-width: 100px; /* Maksymalna szerokość dla QR Code */
+    height: auto; /* Automatyczna wysokość, aby zachować proporcje */
 }
 
 /* Stylowanie sekcji ofertowej */
@@ -228,9 +230,4 @@ form button:hover {
     background-color: #f8f8f8;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Stylowanie QR Code */
-.qr-code-img {
-    width: 100px; /* Zmniejszenie rozmiaru QR Code */
 }

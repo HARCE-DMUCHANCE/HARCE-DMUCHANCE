@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-    height: 150px; /* Zwiększenie wysokości logo */
+    height: 200px; /* Powiększenie wysokości logo */
 }
 
 nav ul {
@@ -79,30 +79,13 @@ section#home {
     right: 20px;
 }
 
-.contact-info-box {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.contact-info-box h2 {
-    margin-top: 0;
-}
-
-.contact-info-box p {
+.quick-contact p {
     margin: 5px 0;
 }
 
-.qr-code {
-    margin-top: 10px;
-}
-
-.qr-code-img {
-    width: 30%; /* Zmniejszenie QR Code o 70% */
-    max-width: 100px; /* Maksymalna szerokość dla QR Code */
-    height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+.quick-contact a {
+    color: #e91e63;
+    text-decoration: none;
 }
 
 /* Stylowanie sekcji ofertowej */
@@ -135,6 +118,12 @@ section#offer {
 .offer-pricing {
     font-size: 20px;
     color: #e91e63;
+}
+
+.offer-image {
+    width: 100%; /* Dopasowanie rozmiaru obrazka */
+    max-width: 600px; /* Maksymalna szerokość dla obrazka */
+    height: auto; /* Automatyczna wysokość, aby zachować proporcje */
 }
 
 /* Stylowanie galerii zdjęć */

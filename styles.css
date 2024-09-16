@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-    height: 100px;
+    height: 200px; /* Zwiększenie wysokości logo */
 }
 
 nav ul {
@@ -71,6 +71,11 @@ nav ul li a {
     width: 30%;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05); /* Efekt powiększenia najechania na zdjęcie */
 }
 
 .download-link {

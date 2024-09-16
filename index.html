@@ -97,14 +97,14 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init("your_public_key"); // Zamień "your_public_key" na Twój Public Key z EmailJS
+            emailjs.init("lxxFrAZ3x3EvMvotD"); // Twój Public Key z EmailJS
         })();
 
         // Funkcja do wysyłania wiadomości
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Zatrzymuje domyślne działanie formularza
 
-            emailjs.sendForm('service_xxxx', 'template_xxxx', this) // Wstaw swój Service ID i Template ID
+            emailjs.sendForm('service_z0xnp8b', 'template_4n78ahr', this) // Service ID i Template ID
                 .then(function() {
                     document.getElementById('contact-form').classList.add('hidden');
                     document.getElementById('thank-you-message').classList.remove('hidden');

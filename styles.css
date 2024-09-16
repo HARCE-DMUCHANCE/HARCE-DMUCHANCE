@@ -50,6 +50,24 @@ nav ul li a {
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.quick-contact {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.quick-contact p {
+    margin: 5px 0;
+}
+
+.quick-contact a {
+    color: #e91e63;
+    text-decoration: none;
+}
+
 .offer-item {
     text-align: center;
     margin: 20px 0;

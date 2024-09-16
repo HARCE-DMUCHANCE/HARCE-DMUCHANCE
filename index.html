@@ -15,6 +15,7 @@
             <img src="LOGO.png" alt="HARCE DMUCHANCE Logo" class="logo">
         </div>
         <nav>
+            <div class="nav-toggle">☰</div>
             <ul>
                 <li><a href="#home">Strona Główna</a></li>
                 <li><a href="#about">Nasza Misja</a></li>
@@ -32,7 +33,7 @@
             <h1>Witaj w HARCE DMUCHANCE</h1>
             <p>Najlepsze dmuchane zabawy dla dzieci!</p>
         </div>
-        </div><div class="quick-contact">
+        <div class="quick-contact">
             <p><strong>Szybki kontakt:</strong></p>
             <p>Jarosław: <a href="tel:+4873002532">730-002-532</a></p>
             <p>Paweł: <a href="tel:+48720835638">720-835-638</a></p>
@@ -42,39 +43,50 @@
 
     <section id="about">
         <h2>Nasza Misja</h2>
-        <p>W HARCE DMUCHANCE wierzymy, że każdy uśmiech ma swoją moc. Naszą misją jest przekształcanie zwykłych podwórek w niezwykłe place zabaw, które zapewniają radość i niezapomniane chwile dzieciom i ich rodzinom. Każde nasze dmuchane urządzenie jest stworzone z pasją i troską, aby każda impreza stała się wyjątkowym wydarzeniem. Działamy z sercem, aby każdy dzień był pełen śmiechu, a każda zabawa - bezpieczna i pełna przygód.</p>
+        <p>W HARCE DMUCHANCE wierzymy, że każdy uśmiech ma swoją moc...</p>
     </section>
 
     <section id="offer">
         <h2>Oferta</h2>
-        <p>Oferujemy wynajem dmuchańców na imprezy zorganizowane i prywatne. W naszej ofercie znajdziecie nowe urządzenia polskiego producenta Amar Group, które posiadają potrzebne atesty i certyfikaty. Sami posiadamy aktualne ubezpieczenie OC.</p>
-        <div class="offer-item">
-            <h3 class="offer-title">Plac zabaw SAFARI</h3>
-            <p class="offer-details">Potrzebna powierzchnia: 5,5 x 5,5 x 3 m</p>
-            <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
-            <img src="Plac%20zabaw.png" alt="Plac zabaw SAFARI">
-        </div>
-        <div class="offer-item">
-            <h3 class="offer-title">Zjeżdżalnia Jungle</h3>
-            <p class="offer-details">Potrzebna powierzchnia: 6 x 4,5 x 7,5 m</p>
-            <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
-            <img src="Jungle.png" alt="Zjeżdżalnia Jungle">
-        </div>
-        <div class="offer-item">
-            <h3 class="offer-title">Zjeżdżalnia Jungle MAX</h3>
-            <p class="offer-details">Potrzebna powierzchnia: 9 x 5,5 x 7 m</p>
-            <p class="offer-pricing">3h - 599 zł<br>5h - 649 zł<br>8h - 799 zł</p>
-            <img src="Jungle_MAX.png" alt="Zjeżdżalnia Jungle MAX" class="offer-image">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="offer-item">
+                        <h3 class="offer-title">Plac zabaw SAFARI</h3>
+                        <p class="offer-details">Potrzebna powierzchnia: 5,5 x 5,5 x 3 m</p>
+                        <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
+                        <img src="Plac%20zabaw.png" alt="Plac zabaw SAFARI">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="offer-item">
+                        <h3 class="offer-title">Zjeżdżalnia Jungle</h3>
+                        <p class="offer-details">Potrzebna powierzchnia: 6 x 4,5 x 7,5 m</p>
+                        <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
+                        <img src="Jungle.png" alt="Zjeżdżalnia Jungle">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="offer-item">
+                        <h3 class="offer-title">Zjeżdżalnia Jungle MAX</h3>
+                        <p class="offer-details">Potrzebna powierzchnia: 9 x 5,5 x 7 m</p>
+                        <p class="offer-pricing">3h - 599 zł<br>5h - 649 zł<br>8h - 799 zł</p>
+                        <img src="Jungle_MAX.png" alt="Zjeżdżalnia Jungle MAX" class="offer-image">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
     <section id="gallery">
         <h2>Zdjęcia z realizacji</h2>
         <div class="gallery-container">
-            <img src="realizacja1.jpeg" alt="Zdjęcie 1 z realizacji">
-            <img src="realizacja2.jpeg" alt="Zdjęcie 2 z realizacji">
-            <img src="realizacja3.jpeg" alt="Zdjęcie 3 z realizacji">
-            <img src="realizacja4.jpeg" alt="Zdjęcie 4 z realizacji">
+            <img src="realizacja1.jpeg" alt="Zdjęcie 1 z realizacji" loading="lazy">
+            <img src="realizacja2.jpeg" alt="Zdjęcie 2 z realizacji" loading="lazy">
+            <img src="realizacja3.jpeg" alt="Zdjęcie 3 z realizacji" loading="lazy">
+            <img src="realizacja4.jpeg" alt="Zdjęcie 4 z realizacji" loading="lazy">
         </div>
     </section>
 
@@ -83,6 +95,15 @@
         <div class="downloads-container">
             <a href="Regulamin_Korzystania_z_Dmuchańców.pdf" class="download-link" download>Regulamin Korzystania z Dmuchańców</a>
         </div>
+    </section>
+
+    <section id="newsletter">
+        <h2>Zapisz się do newslettera</h2>
+        <form action="newsletter.php" method="POST">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Zapisz się</button>
+        </form>
     </section>
 
     <section id="contact">
@@ -106,7 +127,7 @@
                 <button type="submit">Wyślij</button>
             </form>
             <div id="thank-you-message" class="hidden">
-                <p>Dziękujemy za zainteresowanie naszą ofertą. Postaramy się skontaktować z Tobą jak najszybciej. Zachęcamy również do kontaktu telefonicznego.</p>
+                <p>Dziękujemy za zainteresowanie naszą ofertą...</p>
             </div>
         </div>
     </section>
@@ -115,7 +136,17 @@
         <p>&copy; 2024 HARCE DMUCHANCE "All rights reserved"</p>
     </footer>
 
+    <!-- Skrypt Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        const swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+
         // Aktualizacja daty i godziny
         function updateDateTime() {
             const now = new Date();
@@ -139,6 +170,13 @@
             event.preventDefault();
             document.getElementById('contact-form').classList.add('hidden');
             document.getElementById('thank-you-message').classList.remove('hidden');
+        });
+
+        // Hamburger menu
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('nav ul');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
         });
     </script>
 </body>

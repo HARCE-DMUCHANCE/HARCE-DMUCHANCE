@@ -15,7 +15,6 @@
             <img src="LOGO.png" alt="HARCE DMUCHANCE Logo" class="logo">
         </div>
         <nav>
-            <div class="nav-toggle">☰</div>
             <ul>
                 <li><a href="#home">Strona Główna</a></li>
                 <li><a href="#about">Nasza Misja</a></li>
@@ -25,19 +24,12 @@
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
-        <div class="date-time" id="dateTime"></div>
     </header>
 
     <section id="home">
         <div class="hero-text">
             <h1>Witaj w HARCE DMUCHANCE</h1>
             <p>Najlepsze dmuchane zabawy dla dzieci!</p>
-        </div>
-        <div class="quick-contact">
-            <p><strong>Szybki kontakt:</strong></p>
-            <p>Jarosław: <a href="tel:+4873002532">730-002-532</a></p>
-            <p>Paweł: <a href="tel:+48720835638">720-835-638</a></p>
-            <p>Email: <a href="mailto:dmuchancehoryzont@gmail.com">dmuchancehoryzont@gmail.com</a></p>
         </div>
     </section>
 
@@ -48,35 +40,11 @@
 
     <section id="offer">
         <h2>Oferta</h2>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="offer-item">
-                        <h3 class="offer-title">Plac zabaw SAFARI</h3>
-                        <p class="offer-details">Potrzebna powierzchnia: 5,5 x 5,5 x 3 m</p>
-                        <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
-                        <img src="Plac%20zabaw.png" alt="Plac zabaw SAFARI">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="offer-item">
-                        <h3 class="offer-title">Zjeżdżalnia Jungle</h3>
-                        <p class="offer-details">Potrzebna powierzchnia: 6 x 4,5 x 7,5 m</p>
-                        <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
-                        <img src="Jungle.png" alt="Zjeżdżalnia Jungle">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="offer-item">
-                        <h3 class="offer-title">Zjeżdżalnia Jungle MAX</h3>
-                        <p class="offer-details">Potrzebna powierzchnia: 9 x 5,5 x 7 m</p>
-                        <p class="offer-pricing">3h - 599 zł<br>5h - 649 zł<br>8h - 799 zł</p>
-                        <img src="Jungle_MAX.png" alt="Zjeżdżalnia Jungle MAX" class="offer-image">
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+        <div class="offer-item">
+            <h3 class="offer-title">Plac zabaw SAFARI</h3>
+            <p class="offer-details">Potrzebna powierzchnia: 5,5 x 5,5 x 3 m</p>
+            <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
+            <img src="Plac%20zabaw.png" alt="Plac zabaw SAFARI">
         </div>
     </section>
 
@@ -97,37 +65,26 @@
         </div>
     </section>
 
-    <section id="newsletter">
-        <h2>Zapisz się do newslettera</h2>
-        <form action="newsletter.php" method="POST">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Zapisz się</button>
-        </form>
-    </section>
-
     <section id="contact">
         <h2>Kontakt</h2>
         <div class="contact-info">
-            <p><strong>Dane Firmy:</strong></p>
-            <p><strong>Nazwa:</strong> Horyzont Jarosław Wołek</p>
-            <p><strong>Adres:</strong> WĘDROWNA 12/6, 20-819 LUBLIN</p>
-            <p><strong>NIP:</strong> 7123080075</p>
-            <p><strong>REGON:</strong> 061477594</p>
-            <p><strong>Telefon:</strong> +48 730-002-532</p>
-            <p><strong>Telefon:</strong> +48 720-835-638</p>
-            <p><strong>Email:</strong> <a href="mailto:dmuchancehoryzont@gmail.com">dmuchancehoryzont@gmail.com</a></p>
-            <form id="contact-form" action="send_mail.php" method="POST">
+            <form id="contact-form">
                 <label for="name">Imię:</label>
                 <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
                 <label for="phone">Numer telefonu:</label>
                 <input type="tel" id="phone" name="phone" required>
+
                 <label for="message">Treść wiadomości:</label>
                 <textarea id="message" name="message" rows="8" required></textarea>
+
                 <button type="submit">Wyślij</button>
             </form>
             <div id="thank-you-message" class="hidden">
-                <p>Dziękujemy za zainteresowanie naszą ofertą...</p>
+                <p>Dziękujemy za kontakt! Skontaktujemy się z Tobą wkrótce.</p>
             </div>
         </div>
     </section>
@@ -136,47 +93,24 @@
         <p>&copy; 2024 HARCE DMUCHANCE "All rights reserved"</p>
     </footer>
 
-    <!-- Skrypt Swiper.js -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            loop: true,
-        });
+    <!-- Skrypt EmailJS -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("your_public_key"); // Zamień "your_public_key" na Twój Public Key z EmailJS
+        })();
 
-        // Aktualizacja daty i godziny
-        function updateDateTime() {
-            const now = new Date();
-            const dateTimeString = now.toLocaleString();
-            document.getElementById('dateTime').textContent = dateTimeString;
-        }
-        setInterval(updateDateTime, 1000);
-
-        // Animacja powiększania zakładek
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('mouseover', function() {
-                this.style.transform = 'scale(1.2)';
-            });
-            link.addEventListener('mouseout', function() {
-                this.style.transform = 'scale(1)';
-            });
-        });
-
-        // Animacja formularza kontaktowego
+        // Funkcja do wysyłania wiadomości
         document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            document.getElementById('contact-form').classList.add('hidden');
-            document.getElementById('thank-you-message').classList.remove('hidden');
-        });
+            event.preventDefault(); // Zatrzymuje domyślne działanie formularza
 
-        // Hamburger menu
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('nav ul');
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
+            emailjs.sendForm('service_xxxx', 'template_xxxx', this) // Wstaw swój Service ID i Template ID
+                .then(function() {
+                    document.getElementById('contact-form').classList.add('hidden');
+                    document.getElementById('thank-you-message').classList.remove('hidden');
+                }, function(error) {
+                    alert('Wystąpił błąd: ' + JSON.stringify(error));
+                });
         });
     </script>
 </body>

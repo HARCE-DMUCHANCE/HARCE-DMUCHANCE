@@ -1,8 +1,8 @@
 /* Czcionka i styl nagłówków sekcji */
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Baloo 2', cursive;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -31,7 +31,7 @@ body {
   padding: 15px 20px;
   border-radius: 20px 20px 0 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  font-family: 'Chewy', cursive;
+  font-family: 'Baloo 2', cursive;
   font-size: 1.1rem;
   animation: fadeSlideUp 1s ease-out;
   z-index: 9999;

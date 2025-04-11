@@ -52,6 +52,16 @@ section h2 {
 .bubble-contact a:hover {
   text-decoration: underline;
 }
+/* Logo z linkiem */
+.logo {
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
 
 /* Stopka z linkiem do Instagrama */
 footer {

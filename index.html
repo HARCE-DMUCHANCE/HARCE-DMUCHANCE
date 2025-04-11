@@ -4,140 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HARCE DMUCHAŃCE</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="LOGO2.png" alt="HARCE DMUCHANCE Logo" class="logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Strona Główna</a></li>
-                <li><a href="#about">Nasz Cel</a></li>
-                <li><a href="#offer">Oferta</a></li>
-                <li><a href="#gallery">Zdjęcia z realizacji</a></li>
-                <li><a href="#downloads">Pliki do pobrania</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-
-            </header>
-        </nav>
-        <div class="quick-contact">
-            <p><strong>Szybki kontakt:</strong></p>
-            <p>Jarosław: <a href="tel:+4873002532">730-002-532</a></p>
-            <p>Paweł: <a href="tel:+48720835638">720-835-638</a></p>
-            <p>Email: <a href="mailto:harce.dmuchance@gmail.com">harce.dmuchance@gmail.com</a></p>
+        <div class="nav-container">
+            <img src="LOGO2.png" alt="HARCE DMUCHAŃCE" class="logo-small">
+            <nav>
+                <ul>
+                    <li><a href="#home">Start</a></li>
+                    <li><a href="#about">O nas</a></li>
+                    <li><a href="#offer">Oferta</a></li>
+                    <li><a href="#gallery">Realizacje</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#company-info">Dane firmy</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section id="home">
-        <div class="hero-text">
-            <h1>Witaj w HARCE DMUCHAŃCE</h1>
-            <p>Najlepsze dmuchane zabawy dla dzieci od A do Z! Ty odpocznij, my zajmiemy się rozrywką!</p>
-        </div>
+    <section id="home" class="hero">
+        <h1>HARCE DMUCHAŃCE</h1>
+        <p>Profesjonalne atrakcje dla dzieci i całych rodzin. Tworzymy bezpieczne i pełne radości wydarzenia – z nami każda impreza staje się niezapomnianą przygodą!</p>
+        <a href="#contact" class="cta-button">Zarezerwuj termin</a>
     </section>
 
-    <section id="about">
-        <h2>Nasz Cel</h2>
-        <p>W HARCE DMUCHAŃCE wierzymy, że każdy uśmiech ma swoją moc. Naszą misją jest przekształcanie zwykłych podwórek w niezwykłe place zabaw, które zapewniają radość i niezapomniane chwile dzieciom i ich rodzinom. Każde nasze dmuchane urządzenie jest stworzone z pasją i troską, aby każda impreza stała się wyjątkowym wydarzeniem. Działamy z sercem, aby każdy dzień był pełen śmiechu, a każda zabawa – bezpieczna i pełna przygód.</p>
+    <section id="about" class="about">
+        <h2>O nas</h2>
+        <p>Jesteśmy energicznym zespołem, który łączy pasję do zabawy z profesjonalizmem w organizacji wydarzeń plenerowych. Zapewniamy nie tylko świetną rozrywkę, ale również kompleksową obsługę – od montażu po prowadzenie zabaw przez doświadczonych animatorów. Posiadamy specjalistyczne samochody i agregaty prądotwórcze, dzięki czemu możemy działać niezależnie od lokalnych warunków technicznych.</p>
+        <ul>
+            <li>✅ Animatorzy z doświadczeniem</li>
+            <li>✅ Ekipa techniczna dbająca o bezpieczeństwo</li>
+            <li>✅ Niezależne zasilanie (agregaty prądotwórcze)</li>
+            <li>✅ Szybki dojazd i sprawny montaż</li>
+        </ul>
     </section>
 
-    <section id="offer">
-        <h2>Oferta</h2>
-        <div class="offer-item">
-            <h3 class="offer-title">Plac zabaw SAFARI</h3>
-            <p class="offer-details">Potrzebna powierzchnia: 5,5 x 5,5 x 3 m</p>
-            <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
-            <img src="Plac%20zabaw.png" alt="Plac zabaw SAFARI">
-        </div>
-        <div class="offer-item">
-            <h3 class="offer-title">Zjeżdżalnia Jungle</h3>
-            <p class="offer-details">Potrzebna powierzchnia: 6 x 4,5 x 7,5 m</p>
-            <p class="offer-pricing">3h - 499 zł<br>5h - 549 zł<br>8h - 699 zł</p>
-            <img src="Jungle.png" alt="Zjeżdżalnia Jungle">
-        </div>
-        <div class="offer-item">
-            <h3 class="offer-title">Zjeżdżalnia Jungle MAX</h3>
-            <p class="offer-details">Potrzebna powierzchnia: 9 x 5,5 x 7 m</p>
-            <p class="offer-pricing">3h - 599 zł<br>5h - 649 zł<br>8h - 799 zł</p>
-            <img src="Jungle_MAX.png" alt="Zjeżdżalnia Jungle MAX" class="offer-image">
-        </div>
-    </section>
-
-    <section id="gallery">
-        <h2>Zdjęcia z realizacji</h2>
-        <div class="gallery-container">
-            <img src="realizacja1.jpeg" alt="Zdjęcie 1 z realizacji" loading="lazy">
-            <img src="realizacja2.jpeg" alt="Zdjęcie 2 z realizacji" loading="lazy">
-            <img src="realizacja3.jpeg" alt="Zdjęcie 3 z realizacji" loading="lazy">
-            <img src="realizacja4.jpeg" alt="Zdjęcie 4 z realizacji" loading="lazy">
-        </div>
-    </section>
-
-    <section id="downloads">
-        <h2>Pliki do pobrania</h2>
-        <div class="downloads-container">
-            <a href="Harce dmuchance - ulotka A5.pdf" class="download-link" download>Ulotka reklamowa</a>
-        </div>
-        <a href="Harce dmuchance - ulotka A52.pdf" class="download-link" download>Oferta w formie ulotki</a>
-        </div>
-
-    </section>
-
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <div class="contact-info">
-            <p><strong>Dane Firmy:</strong></p>
-            <p><strong>Nazwa:</strong> Horyzont Jarosław Wołek</p>
-            <p><strong>Adres:</strong> WĘDROWNA 12/6, 20-819 LUBLIN</p>
-            <p><strong>NIP:</strong> 7123080075</p>
-            <p><strong>REGON:</strong> 061477594</p>
-            <p><strong>Telefon:</strong> +48 730-002-532</p>
-            <p><strong>Telefon:</strong> +48 720-835-638</p>
-            <p><strong>Email:</strong> <a href="mailto:harce.dmuchance@gmail.com">harce.dmuchance@gmail.com</a></p>
-
-        <div class="contact-info">
-            <form id="contact-form">
-                <label for="name">Imię:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Numer telefonu:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="message">Treść wiadomości:</label>
-                <textarea id="message" name="message" rows="8" required></textarea>
-
-                <button type="submit">Wyślij</button>
-            </form>
-            <div id="thank-you-message" class="hidden">
-                <p>Dziękujemy za kontakt! Skontaktujemy się z Tobą wkrótce.</p>
+    <section id="offer" class="offer">
+        <h2>Nasza oferta</h2>
+        <div class="offer-grid">
+            <div class="offer-box">
+                <h3>Plac zabaw SAFARI</h3>
+                <img src="Plac%20zabaw.png" alt="Plac zabaw SAFARI">
+                <p>Wymiary: 5,5 x 5,5 x 3 m</p>
+                <p>Cennik: 3h - 499 zł | 5h - 549 zł | 8h - 699 zł</p>
+            </div>
+            <div class="offer-box">
+                <h3>Zjeżdżalnia Jungle</h3>
+                <img src="Jungle.png" alt="Zjeżdżalnia Jungle">
+                <p>Wymiary: 6 x 4,5 x 7,5 m</p>
+                <p>Cennik: 3h - 499 zł | 5h - 549 zł | 8h - 699 zł</p>
+            </div>
+            <div class="offer-box">
+                <h3>Zjeżdżalnia Jungle MAX</h3>
+                <img src="Jungle_MAX.png" alt="Zjeżdżalnia Jungle MAX">
+                <p>Wymiary: 9 x 5,5 x 7 m</p>
+                <p>Cennik: 3h - 599 zł | 5h - 649 zł | 8h - 799 zł</p>
             </div>
         </div>
     </section>
 
+    <section id="gallery" class="gallery">
+        <h2>Galeria realizacji</h2>
+        <p>Każde wydarzenie to nowe wyzwanie i nowa radość! Zobacz, jak wyglądają nasze atrakcje w akcji:</p>
+        <div class="gallery-grid">
+            <img src="realizacja1.jpeg" alt="Realizacja 1">
+            <img src="realizacja2.jpeg" alt="Realizacja 2">
+            <img src="realizacja3.jpeg" alt="Realizacja 3">
+            <img src="realizacja4.jpeg" alt="Realizacja 4">
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Skontaktuj się z nami</h2>
+        <form id="contact-form">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+        <div id="thank-you-message" class="hidden">
+            <p>Dziękujemy za kontakt! Skontaktujemy się z Tobą wkrótce.</p>
+        </div>
+    </section>
+
+    <section id="company-info" class="about">
+        <h2>Dane firmy</h2>
+        <p>HARCE DMUCHAŃCE – Twoi specjaliści od radosnych wydarzeń!</p>
+        <p><strong>Nazwa rejestrowa:</strong> Horyzont Jarosław Wołek</p>
+        <p><strong>Adres:</strong> ul. Wędrowna 12/6, 20-819 Lublin</p>
+        <p><strong>NIP:</strong> 7123080075</p>
+        <p><strong>REGON:</strong> 061477594</p>
+        <p><strong>Telefon:</strong> +48 730-002-532 | +48 720-835-638</p>
+        <p><strong>Email:</strong> <a href="mailto:harce.dmuchance@gmail.com">harce.dmuchance@gmail.com</a></p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 HARCE DMUCHANCE "All rights reserved"</p>
+        <p>&copy; 2024 HARCE DMUCHAŃCE</p>
     </footer>
 
-    <!-- Skrypt EmailJS -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
         (function() {
-            emailjs.init("lxxFrAZ3x3EvMvotD"); // Twój Public Key z EmailJS
+            emailjs.init("lxxFrAZ3x3EvMvotD");
         })();
 
-        // Funkcja do wysyłania wiadomości
         document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Zatrzymuje domyślne działanie formularza
-
-            emailjs.sendForm('service_z0xnp8b', 'template_4n78ahr', this) // Service ID i Template ID
+            event.preventDefault();
+            emailjs.sendForm('service_z0xnp8b', 'template_4n78ahr', this)
                 .then(function() {
                     document.getElementById('contact-form').classList.add('hidden');
                     document.getElementById('thank-you-message').classList.remove('hidden');

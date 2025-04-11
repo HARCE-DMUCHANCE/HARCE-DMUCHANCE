@@ -33,7 +33,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffe0ec, #f8e1ff, #e6f7ff);
+  background: linear-gradient(135deg, #e0f7fa, #e1f5fe, #e3f2fd);
   background-attachment: fixed;
   background-size: 600% 600%;
   animation: animatedBG 20s ease infinite;
@@ -145,7 +145,7 @@ section#tips ul li {
 
 .gallery-grid img {
   width: 100%;
-  height: auto;
+  height: 220px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -157,13 +157,61 @@ section#tips ul li {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Sekcja Opinie Klientów */
+#reviews {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #4a148c;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+#reviews h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #880e4f;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review {
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.review-text {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.review-author {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: right;
+  color: #6a1b9a;
+}
+
 /* Responsywność */
 @media (max-width: 768px) {
-  section#tips {
+  section#tips,
+  #reviews {
     padding: 20px;
   }
 
-  section#tips h2 {
+  section#tips h2,
+  #reviews h2 {
     font-size: 1.6rem;
   }
 
@@ -171,7 +219,8 @@ section#tips ul li {
     font-size: 1.1rem;
   }
 
-  section#tips p {
+  section#tips p,
+  .review-text {
     font-size: 0.95rem;
   }
 

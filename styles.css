@@ -1,6 +1,27 @@
 /* Czcionka i styl nagłówków sekcji */
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #bbdefb, #e3f2fd, #e0f7fa);
+  background-attachment: fixed;
+  background-size: 600% 600%;
+  animation: animatedBG 20s ease infinite;
+  scroll-behavior: smooth;
+}
+
+@keyframes animatedBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 section h2 {
   font-family: 'Chewy', cursive;
   font-size: 2.5rem;
@@ -22,7 +43,6 @@ section h2 {
   100% { transform: scale(1) translateY(0); }
 }
 
-/* Chmurka kontaktowa */
 .bubble-contact {
   position: fixed;
   bottom: 20px;
@@ -52,66 +72,7 @@ section h2 {
 .bubble-contact a:hover {
   text-decoration: underline;
 }
-/* Logo z linkiem */
-.logo {
-  height: 70px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
 
-.logo:hover {
-  transform: scale(1.05);
-}
-
-/* Stopka z linkiem do Instagrama */
-footer {
-  background-color: #eee;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-footer a.instagram-link {
-  display: inline-block;
-  color: #e1306c;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a.instagram-link:hover {
-  color: #c2185b;
-}
-
-/* Tło i wygląd globalny */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  font-size: 16px;
-  overflow-x: hidden;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #bbdefb, #e3f2fd, #e0f7fa);
-  background-attachment: fixed;
-  background-size: 600% 600%;
-  animation: animatedBG 20s ease infinite;
-  scroll-behavior: smooth;
-}
-
-@keyframes animatedBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Nagłówek z logo i menu */
 header {
   background-color: #ffffffcc;
   position: sticky;
@@ -126,7 +87,13 @@ header {
 }
 
 .logo {
-  height: 50px;
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 nav ul {
@@ -151,47 +118,6 @@ nav ul li a:hover {
   color: #880e4f;
 }
 
-/* Sekcja: Harce Radzą */
-section#tips {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  padding: 30px;
-  margin: 40px auto;
-  max-width: 1000px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  color: #4a148c;
-  animation: fadeIn 1s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-section#tips h3 {
-  font-size: 1.25rem;
-  margin-top: 20px;
-  color: #ad1457;
-}
-
-section#tips p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-section#tips ul {
-  padding-left: 20px;
-  margin-bottom: 15px;
-}
-
-section#tips ul li {
-  margin-bottom: 8px;
-  list-style-type: disc;
-}
-
-/* Galeria zdjęć */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -215,7 +141,6 @@ section#tips ul li {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Sekcja Opinie Klientów */
 #reviews {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
@@ -254,24 +179,54 @@ section#tips ul li {
   color: #6a1b9a;
 }
 
-/* Responsywność */
-@media (max-width: 768px) {
-  section#tips,
-  #reviews {
-    padding: 20px;
-  }
+.map-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
 
+.map-container iframe {
+  width: 90%;
+  max-width: 800px;
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer a.instagram-link {
+  display: inline-block;
+  color: #e1306c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a.instagram-link:hover {
+  color: #c2185b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
   section h2 {
     font-size: 1.8rem;
-  }
-
-  section#tips h3 {
-    font-size: 1.1rem;
-  }
-
-  section#tips p,
-  .review-text {
-    font-size: 0.95rem;
   }
 
   header {
@@ -286,6 +241,10 @@ section#tips ul li {
   }
 
   .logo {
-    height: 40px;
+    height: 60px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 }

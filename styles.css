@@ -22,132 +22,55 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-section h2 {
+.bubble-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2196f3;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 20px 20px 0 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   font-family: 'Chewy', cursive;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #2196f3;
-  background-color: #e3f2fd;
-  padding: 10px 20px;
-  margin: 40px auto 20px;
-  border-radius: 20px;
-  width: fit-content;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transform: rotate(-1.5deg);
-  animation: bounceIn 1s ease-out;
+  font-size: 1.1rem;
+  animation: fadeSlideUp 1s ease-out;
+  z-index: 9999;
 }
 
-.hero {
-  background: #e1f5fe;
-  padding: 100px 20px;
-  text-align: center;
-  color: #01579b;
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-family: 'Chewy', cursive;
-  margin-bottom: 20px;
+.bubble-contact a {
+  color: #fffde7;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.hero p {
-  font-size: 1.3rem;
-  font-family: 'Patrick Hand', cursive;
+.bubble-contact a:hover {
+  text-decoration: underline;
 }
 
-#about p {
-  font-size: 1.2rem;
-  font-family: 'Patrick Hand', cursive;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px 15px;
-  color: #333;
-}
-
-.offer-grid {
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.offer-box {
-  background: #f9fbe7;
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
 
-.offer-box:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.offer-box h3 {
-  font-family: 'Chewy', cursive;
-  font-size: 1.8rem;
-  color: #388e3c;
-  margin: 0;
-}
-
-.offer-box p {
-  margin: 0;
-  font-size: 1rem;
-  font-family: 'Patrick Hand', cursive;
-  color: #444;
-}
-
-.offer-box img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 10px;
-  align-self: center;
-}
-
-.offer-box .cta-button {
-  margin-top: auto;
-  padding: 10px 20px;
-  background-color: #81c784;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: 'Patrick Hand', cursive;
-  align-self: start;
-  transition: background-color 0.3s ease;
-  text-align: center;
-}
-
-.offer-box .cta-button:hover {
-  background-color: #66bb6a;
-}
-
-.offer-features {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  font-family: 'Patrick Hand', cursive;
-  color: #5d4037;
-  list-style: none;
-  padding-left: 0;
-}
-
-.offer-features li::before {
-  content: "🎈 ";
-  margin-right: 5px;
-}
-
-.offer-description {
-  margin-bottom: 10px;
-  line-height: 1.5;
-  font-family: 'Patrick Hand', cursive;
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }

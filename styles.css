@@ -1,46 +1,106 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HARCE DMUCHAŃCE</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-</head>
-<body>
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 40px;
+}
 
-  <section id="tips" class="protips-container">
-    <h2>🎉 Harce Radzą – Ciekawostki i Porady Animatora</h2>
+footer a.instagram-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #e1306c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-    <h3>🎈 Jak narodził się pierwszy dmuchaniec?</h3>
-    <p>W latach 60. pewien inżynier zauważył, że podmuchy powietrza pomiędzy dwiema warstwami plandeki tworzą efekt skakania. Tak zrodził się pomysł na pierwszą nadmuchiwaną atrakcję, która do dziś daje dzieciom niekończącą się radość.</p>
+footer a.instagram-link:hover {
+  color: #c2185b;
+}
 
-    <h3>💡 Dlaczego dmuchańce to coś więcej niż zabawa?</h3>
-    <p>Podczas skakania dzieci nie tylko się śmieją – one wzmacniają mięśnie, uczą się równowagi i reagowania na ruch innych uczestników. To świetny trening dla ciała i ducha!</p>
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #ffe0ec, #f8e1ff, #e6f7ff);
+  background-attachment: fixed;
+  background-size: 600% 600%;
+  animation: animatedBG 20s ease infinite;
+}
 
-    <h3>🧠 Rozwój psychiczny przez ruch?</h3>
-    <p>Aktywna zabawa wspiera koncentrację, pewność siebie i umiejętność współpracy w grupie. Kolory, muzyka i atmosfera wprowadzają dzieci w dobry nastrój i pomagają im nawiązywać relacje.</p>
+@keyframes animatedBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    <h3>🎤 Głos naszego Animatora:</h3>
-    <p>„Animator to ktoś więcej niż osoba od gier i zabaw – to przewodnik po świecie dziecięcej wyobraźni. Naszym celem jest nie tylko rozbawić, ale też zainspirować i zachęcić do wspólnej zabawy z innymi.”</p>
+section#tips {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Roboto', sans-serif;
+  color: #4a148c;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
 
-    <h3>📌 Pro Tipy na każdą imprezę:</h3>
-    <ul>
-      <li>Nie zostawiaj dzieci samych – obecność animatora zwiększa bezpieczeństwo i zaangażowanie.</li>
-      <li>Dobierz atrakcje do wieku – młodsze dzieci lepiej bawią się na mniejszych konstrukcjach.</li>
-      <li>Dodaj muzykę! – rytm i taniec to świetny sposób na rozkręcenie każdego eventu.</li>
-      <li>Przygotuj wodę i przekąski – po dobrej zabawie zawsze chce się pić!</li>
-    </ul>
-  </section>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  <footer>
-    <p>&copy; 2024 HARCE DMUCHAŃCE</p>
-    <a class="instagram-link" href="https://www.instagram.com/harce_dmuchance_lublin" target="_blank">
-      Obserwuj nas na Instagramie
-    </a>
-  </footer>
+section#tips h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #880e4f;
+}
 
-</body>
-</html>
+section#tips h3 {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  color: #ad1457;
+}
+
+section#tips p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #4a148c;
+}
+
+section#tips ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+section#tips ul li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+@media (max-width: 768px) {
+  section#tips {
+    padding: 20px;
+  }
+
+  section#tips h2 {
+    font-size: 1.6rem;
+  }
+
+  section#tips h3 {
+    font-size: 1.1rem;
+  }
+
+  section#tips p {
+    font-size: 0.95rem;
+  }
+}
